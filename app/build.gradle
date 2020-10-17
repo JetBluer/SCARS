@@ -6,4 +6,5 @@ plugins {
 
 android {
 
-    buildFeatu
+    buildFeatures {
+        ml
