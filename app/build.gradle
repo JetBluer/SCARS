@@ -8,3 +8,4 @@ android {
 
     buildFeatures {
         mlModelBinding true
+        dataBinding t
