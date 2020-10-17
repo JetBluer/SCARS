@@ -7,4 +7,4 @@ plugins {
 android {
 
     buildFeatures {
-        ml
+        mlModelBinding true
