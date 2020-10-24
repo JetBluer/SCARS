@@ -11,4 +11,5 @@ android {
         dataBinding true
     }
 
-    aap
+    aaptOptions {
+        noCompr
