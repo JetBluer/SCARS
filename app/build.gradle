@@ -13,3 +13,7 @@ android {
 
     aaptOptions {
         noCompress "tflite"
+    }
+
+
+    comp
