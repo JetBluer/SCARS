@@ -16,4 +16,5 @@ android {
     }
 
 
-    compileSdkVersion 
+    compileSdkVersion 30
+    buildToolsVersion
