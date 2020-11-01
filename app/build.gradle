@@ -16,4 +16,4 @@ android {
     }
 
 
-    comp
+    compileSdkVersion 
