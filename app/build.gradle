@@ -17,4 +17,6 @@ android {
 
 
     compileSdkVersion 30
-    buildToolsVersion
+    buildToolsVersion "30.0.3"
+
+    
