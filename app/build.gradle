@@ -21,4 +21,4 @@ android {
 
     defaultConfig {
         applicationId "edu.califer.facemaskdectector"
-   
+        minSdkVers
