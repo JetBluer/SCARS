@@ -20,4 +20,5 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "edu.califer.fac
+        applicationId "edu.califer.facemaskdectector"
+   
