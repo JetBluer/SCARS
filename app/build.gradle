@@ -22,4 +22,5 @@ android {
     defaultConfig {
         applicationId "edu.califer.facemaskdectector"
         minSdkVersion 21
-        targ
+        targetSdkVersion 30
+ 
