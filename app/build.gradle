@@ -23,4 +23,5 @@ android {
         applicationId "edu.califer.facemaskdectector"
         minSdkVersion 21
         targetSdkVersion 30
+        versionCode 1
  
