@@ -30,4 +30,5 @@ android {
     }
 
     buildTypes {
-      
+        release {
+            m
