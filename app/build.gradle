@@ -31,4 +31,5 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled fals
+            minifyEnabled false
+            proguardF
