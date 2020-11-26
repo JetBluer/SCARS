@@ -32,4 +32,4 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProgua
+            proguardFiles getDefaultProguardFile('progua
