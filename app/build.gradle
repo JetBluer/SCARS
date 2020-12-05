@@ -36,4 +36,4 @@ android {
         }
     }
     compileOptions {
-        sourceCompa
+        sourceCompatibility Java
