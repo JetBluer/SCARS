@@ -46,4 +46,4 @@ android {
 
 dependencies {
 
-    implementation '
+    implementation 'androidx.core:core
