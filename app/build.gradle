@@ -61,4 +61,4 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
 
     // CameraX core library using the camera2 implementation
-    implementation "androidx.camera:
+    implementation "androidx.camera:camera-core:${camer
