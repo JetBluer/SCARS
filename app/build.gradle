@@ -67,4 +67,4 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_view_version}"
     implementation "androidx.camera:camera-extensions:${camerax_view_version}"
 
-    //For Mac
+    //For Machine Learning 
