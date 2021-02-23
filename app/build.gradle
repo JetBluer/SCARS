@@ -67,4 +67,5 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_view_version}"
     implementation "androidx.camera:camera-extensions:${camerax_view_version}"
 
-    //For Machine Learning 
+    //For Machine Learning and MLkit
+    imp
