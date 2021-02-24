@@ -68,4 +68,4 @@ dependencies {
     implementation "androidx.camera:camera-extensions:${camerax_view_version}"
 
     //For Machine Learning and MLkit
-    implementation "org.tensorflow:tensorf
+    implementation "org.tensorflow:tensorflow-lite-metadata:${tflit
