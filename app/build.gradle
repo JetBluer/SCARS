@@ -69,4 +69,4 @@ dependencies {
 
     //For Machine Learning and MLkit
     implementation "org.tensorflow:tensorflow-lite-metadata:${tflite}"
-    implement
+    implementation "org.tensor
