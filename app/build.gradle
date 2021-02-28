@@ -70,4 +70,4 @@ dependencies {
     //For Machine Learning and MLkit
     implementation "org.tensorflow:tensorflow-lite-metadata:${tflite}"
     implementation "org.tensorflow:tensorflow-lite-gpu:2.2.0"
-    implementatio
+    implementation 'org.tensorflow:
