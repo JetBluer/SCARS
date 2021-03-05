@@ -71,4 +71,4 @@ dependencies {
     implementation "org.tensorflow:tensorflow-lite-metadata:${tflite}"
     implementation "org.tensorflow:tensorflow-lite-gpu:2.2.0"
     implementation 'org.tensorflow:tensorflow-lite-support:0.0.0-nightly-SNAPSHOT'
-    implementation 'org.tensorflow:tensorflow-lite-task-vision:0.0.0-ni
+    implementation 'org.tensorflow:tensorflow-lite-task-vision:0.0.0-nightly-SNAPSHOT
