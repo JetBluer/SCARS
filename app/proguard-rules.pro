@@ -1,1 +1,1 @@
-# Add project sp
+# Add project specific ProGuard
