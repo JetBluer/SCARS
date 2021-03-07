@@ -1,2 +1,2 @@
 # Add project specific ProGuard rules here.
-# You can control the se
+# You can control the set of applied c
