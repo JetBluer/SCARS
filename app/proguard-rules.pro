@@ -16,4 +16,5 @@
 # debugging stack traces.
 #-keepattributes SourceFile,LineNumberTable
 
-# If you keep the line number information, uncom
+# If you keep the line number information, uncomment this to
+# hide th
