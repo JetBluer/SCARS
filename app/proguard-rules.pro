@@ -17,4 +17,4 @@
 #-keepattributes SourceFile,LineNumberTable
 
 # If you keep the line number information, uncomment this to
-# hide th
+# hide the original sour
