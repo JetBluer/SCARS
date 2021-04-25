@@ -13,4 +13,4 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-@RunWith(
+@RunWith(AndroidJUnit4::class
