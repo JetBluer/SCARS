@@ -2,4 +2,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.califer.facemaskdectector">
 
-    <uses-permission android:name="android.permission.CAM
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <
