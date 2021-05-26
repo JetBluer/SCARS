@@ -3,4 +3,6 @@
     package="edu.califer.facemaskdectector">
 
     <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardwar
+    <uses-feature android:name="android.hardware.camera.any"/>
+
+    <ap
