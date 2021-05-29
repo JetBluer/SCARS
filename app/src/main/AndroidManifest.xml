@@ -6,4 +6,5 @@
     <uses-feature android:name="android.hardware.camera.any"/>
 
     <application
-        android:allowBac
+        android:allowBackup="true"
+       
