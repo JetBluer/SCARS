@@ -12,4 +12,4 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FaceMaskDectector">
-        <activity android:name
+        <activity android:name=".MainActivity"
