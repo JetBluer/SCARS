@@ -13,4 +13,5 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FaceMaskDectector">
         <activity android:name=".MainActivity">
-            <int
+            <intent-filter>
+ 
