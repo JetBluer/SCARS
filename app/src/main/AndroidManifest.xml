@@ -14,4 +14,4 @@
         android:theme="@style/Theme.FaceMaskDectector">
         <activity android:name=".MainActivity">
             <intent-filter>
- 
+                <action andr
