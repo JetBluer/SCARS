@@ -30,3 +30,20 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.label.Category
+import org.tensorflow.lite.support.model.Model
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
+import kotlin.math.abs
+import kotlin.math.max
+import kotlin.math.min
+
+
+typealias  CameraBitmapOutputListener = (bitmap: Bitmap) -> Unit
+
+class MainActivity : AppCompatActivity() {
+
+    private var preview: Preview? = null
+    private var imageAnalyzer: ImageAnalysis? = null
+    private var cameraProvider: ProcessCameraProvider? = null
+    private var lensFacing: Int = CameraSelector.LENS_FACING_FRONT
+    private var camera: Camera? = null
