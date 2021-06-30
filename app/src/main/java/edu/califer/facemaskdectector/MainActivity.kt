@@ -76,3 +76,22 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun setUpCameraThread() {
+        cameraExecutor = Executors.newSingleThreadExecutor()
+    }
+
+    private fun setUpCameraControllers() {
+
+        binding.cameraSwitch.setOnClickListener {
+            lensFacing = if (lensFacing == CameraSelector.LENS_FACING_FRONT) {
+                CameraSelector.LENS_FACING_BACK
+            } else {
+                CameraSelector.LENS_FACING_FRONT
+            }
+
+            setUpCameraUseCases()
+        }
+        try {
+            binding.cameraSwitch.isEnabled = hasBackCamera && hasFrontCamera
+        } catch (exception: CameraInfoUnavailableException) {
