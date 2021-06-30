@@ -64,3 +64,15 @@ class MainActivity : AppCompatActivity() {
         actionBar?.hide()
 
         setUpML()
+
+        setUpCameraThread()
+
+        setUpCameraControllers()
+
+        if (!allPermissionGranted) {
+            requireCameraPermission()
+        } else {
+            setUpCamera()
+        }
+
+    }
