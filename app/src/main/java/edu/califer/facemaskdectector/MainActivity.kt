@@ -95,3 +95,22 @@ class MainActivity : AppCompatActivity() {
         try {
             binding.cameraSwitch.isEnabled = hasBackCamera && hasFrontCamera
         } catch (exception: CameraInfoUnavailableException) {
+            binding.cameraSwitch.isEnabled = false
+            exception.printStackTrace()
+        }
+    }
+
+    private fun requireCameraPermission() {
+        ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSION)
+    }
+
+    private fun grantedCameraPermission(requestCode: Int) {
+        if (requestCode == REQUEST_CODE_PERMISSION) {
+            if (allPermissionGranted) {
+                setUpCamera()
+            } else {
+                Toast.makeText(applicationContext, "Permission Not Granted !", Toast.LENGTH_LONG)
+                    .show()
+                finish()
+            }
+        }
