@@ -114,3 +114,24 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
         }
+    }
+
+    private fun setUpCameraUseCases() {
+
+        val cameraSelector: CameraSelector =
+            CameraSelector.Builder().requireLensFacing(lensFacing).build()
+
+        val metrics: DisplayMetrics = DisplayMetrics().also {
+            binding.cameraView.display.getRealMetrics(it)
+        }
+        val rotation: Int = binding.cameraView.display.rotation
+        val screenAspectRatio: Int = aspectRatio(metrics.widthPixels, metrics.heightPixels)
+        preview = Preview.Builder()
+            .setTargetAspectRatio(screenAspectRatio)
+            .setTargetRotation(rotation)
+            .build()
+
+
+        imageAnalyzer = ImageAnalysis.Builder()
+            .setTargetAspectRatio(screenAspectRatio)
+            .setTargetAspectRatio(rotation)
