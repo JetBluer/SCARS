@@ -135,3 +135,22 @@ class MainActivity : AppCompatActivity() {
         imageAnalyzer = ImageAnalysis.Builder()
             .setTargetAspectRatio(screenAspectRatio)
             .setTargetAspectRatio(rotation)
+            .build()
+            .also {
+                it.setAnalyzer(
+                    cameraExecutor,
+                    BitmapOutPutAnalysis(applicationContext) { bitmap ->
+                        setUpMLOutput(bitmap)
+                    }
+                )
+            }
+
+        cameraProvider?.unbindAll()
+        try {
+            camera = cameraProvider?.bindToLifecycle(
+                this,
+                cameraSelector,
+                preview,
+                imageAnalyzer
+            )
+            preview?.setSurfaceProvider(binding.cameraView.surfaceProvider)
