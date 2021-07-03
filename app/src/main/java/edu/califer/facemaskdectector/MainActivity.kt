@@ -154,3 +154,24 @@ class MainActivity : AppCompatActivity() {
                 imageAnalyzer
             )
             preview?.setSurfaceProvider(binding.cameraView.surfaceProvider)
+        } catch (exception: Exception) {
+            Log.d(TAG, "USE CASE BINDING FAILURE", exception)
+        }
+
+
+    }
+
+    private fun setUpCamera() {
+
+        val cameraProviderFuture: ListenableFuture<ProcessCameraProvider> =
+            ProcessCameraProvider.getInstance(this)
+
+        cameraProviderFuture.addListener(Runnable {
+
+            cameraProvider = cameraProviderFuture.get()
+
+            lensFacing = when {
+                hasFrontCamera -> CameraSelector.LENS_FACING_FRONT
+                hasBackCamera -> CameraSelector.LENS_FACING_BACK
+                else -> throw IllegalStateException("No Camera available")
+            }
