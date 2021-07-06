@@ -175,3 +175,19 @@ class MainActivity : AppCompatActivity() {
                 hasBackCamera -> CameraSelector.LENS_FACING_BACK
                 else -> throw IllegalStateException("No Camera available")
             }
+
+            setUpCameraControllers()
+            setUpCameraUseCases()
+        }, ContextCompat.getMainExecutor(this))
+
+    }
+
+    private val allPermissionGranted: Boolean
+        get() {
+            return REQUIRED_PERMISSIONS.all {
+                ContextCompat.checkSelfPermission(
+                    baseContext,
+                    it
+                ) == PackageManager.PERMISSION_GRANTED
+            }
+        }
