@@ -205,3 +205,16 @@ class MainActivity : AppCompatActivity() {
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        grantedCameraPermission(requestCode)
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        setUpCameraControllers()
+    }
+
+    private fun aspectRatio(width: Int, height: Int): Int {
+        val previewRatio: Double = max(width, height).toDouble() / min(width, height)
