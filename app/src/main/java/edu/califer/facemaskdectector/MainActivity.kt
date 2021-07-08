@@ -218,3 +218,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun aspectRatio(width: Int, height: Int): Int {
         val previewRatio: Double = max(width, height).toDouble() / min(width, height)
+        if (abs(previewRatio - RATIO_4_3_VALUE) <= abs(previewRatio - RATIO_16_9_VALUE)) {
+            return AspectRatio.RATIO_4_3
+        }
+        return AspectRatio.RATIO_16_9
+    }
+
+
+    private lateinit var faceMaskDetection: FackMaskDetection
+
+
+    private fun setUpML() {
+        val options: Model.Options =
+            Model.Options.Builder().setDevice(Model.Device.GPU).setNumThreads(5).build()
+        faceMaskDetection = FackMaskDetection.newInstance(applicationContext, options)
+    }
