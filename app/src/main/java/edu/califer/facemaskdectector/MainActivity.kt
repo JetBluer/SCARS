@@ -233,3 +233,25 @@ class MainActivity : AppCompatActivity() {
             Model.Options.Builder().setDevice(Model.Device.GPU).setNumThreads(5).build()
         faceMaskDetection = FackMaskDetection.newInstance(applicationContext, options)
     }
+
+    private fun setUpMLOutput(bitmap: Bitmap) {
+        val tensorImage: TensorImage = TensorImage.fromBitmap(bitmap)
+        val result: FackMaskDetection.Outputs = faceMaskDetection.process(tensorImage)
+        val output: List<Category> = result.probabilityAsCategoryList.apply {
+            sortByDescending { res -> res.score }
+        }
+
+        lifecycleScope.launch(Dispatchers.Main) {
+            output.firstOrNull()?.let { category ->
+                binding.textView.text = category.label
+                binding.textView.setTextColor(
+                    ContextCompat.getColor(
+                        applicationContext,
+                        if (category.label == "without_mask") R.color.red else R.color.green
+                    )
+                )
+
+                binding.overlay.background = AppCompatResources.getDrawable(
+                    applicationContext,
+                    if (category.label == "without_mask") R.drawable.red_border else R.drawable.green_border
+                )
