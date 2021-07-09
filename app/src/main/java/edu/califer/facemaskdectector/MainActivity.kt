@@ -255,3 +255,28 @@ class MainActivity : AppCompatActivity() {
                     applicationContext,
                     if (category.label == "without_mask") R.drawable.red_border else R.drawable.green_border
                 )
+
+                binding.progressBar.progressTintList = AppCompatResources.getColorStateList(
+                    applicationContext,
+                    if (category.label == "without_mask") R.color.red else R.color.green
+                )
+
+                binding.progressBar.progress = (category.score * 100).toInt()
+            }
+        }
+    }
+
+    companion object {
+        private const val TAG = "Face_Mask_Detector"
+        private const val REQUEST_CODE_PERMISSION = 0x98
+        private val REQUIRED_PERMISSIONS: Array<String> =
+            arrayOf(android.Manifest.permission.CAMERA)
+        private const val RATIO_4_3_VALUE: Double = 4.0 / 3.0
+        private const val RATIO_16_9_VALUE: Double = (16.0 / 9.0)
+
+    }
+
+}
+
+private class BitmapOutPutAnalysis(
+    context: Context,
