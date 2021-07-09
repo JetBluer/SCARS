@@ -280,3 +280,22 @@ class MainActivity : AppCompatActivity() {
 
 private class BitmapOutPutAnalysis(
     context: Context,
+    private val listener: CameraBitmapOutputListener
+) : ImageAnalysis.Analyzer {
+    private val yuvToRgbConverter = YuvToRgbConverter(context)
+    private lateinit var bitmapBuffer: Bitmap
+    private lateinit var rotationMatrix: Matrix
+
+    @SuppressLint("UnsafeExperimentalError", "UnsafeOptInUsageError")
+    private fun ImageProxy.toBitmap(): Bitmap? {
+
+        val image: Image = this.image ?: return null
+        if (!::bitmapBuffer.isInitialized) {
+            rotationMatrix = Matrix()
+            rotationMatrix.postRotate(this.imageInfo.rotationDegrees.toFloat())
+            bitmapBuffer = Bitmap.createBitmap(this.width, this.height, Bitmap.Config.ARGB_8888)
+        }
+
+        yuvToRgbConverter.yuvToRgb(image, bitmapBuffer)
+
+        return Bitmap.createBitmap(
