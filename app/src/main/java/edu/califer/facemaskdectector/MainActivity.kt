@@ -299,3 +299,20 @@ private class BitmapOutPutAnalysis(
         yuvToRgbConverter.yuvToRgb(image, bitmapBuffer)
 
         return Bitmap.createBitmap(
+            bitmapBuffer,
+            0,
+            0,
+            bitmapBuffer.width,
+            bitmapBuffer.height,
+            rotationMatrix,
+            false
+        )
+
+    }
+
+    override fun analyze(image: ImageProxy) {
+        image.toBitmap()?.let {
+            listener(it)
+        }
+        image.close()
+    }
