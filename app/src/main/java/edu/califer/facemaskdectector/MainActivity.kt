@@ -316,3 +316,5 @@ private class BitmapOutPutAnalysis(
         }
         image.close()
     }
+
+}
