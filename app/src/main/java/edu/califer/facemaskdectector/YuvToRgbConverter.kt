@@ -22,3 +22,19 @@ class YuvToRgbConverter(context: Context) {
         ScriptIntrinsicYuvToRGB.create(renderString, Element.U8_4(renderString))
 
     private lateinit var YUBBuffer: ByteBuffer
+    private lateinit var inputAllocation: Allocation
+    private lateinit var outputAllocation: Allocation
+
+    //Pixel Count = 30fs and 640*480 px. This is the default analyzer for machine learning model
+    private var pixelCount: Int = -1
+
+    /**
+     * This function is able to achieve the same fps as the cameraX image analyses use case on a pixel 3XL device at a default analyser resolution which is 30fps with 640* 480 px.
+     */
+    @Synchronized
+    fun yuvToRgb(image: Image, output: Bitmap) {
+
+        if (!::YUBBuffer.isInitialized) {
+            pixelCount = image.cropRect.width() * image.cropRect.height()
+            val pixelSizeBits = ImageFormat.getBitsPerPixel(ImageFormat.YUV_420_888)
+            YUBBuffer = ByteBuffer.allocateDirect(pixelCount * pixelSizeBits / 8)
