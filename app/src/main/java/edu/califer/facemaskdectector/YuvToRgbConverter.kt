@@ -49,3 +49,21 @@ class YuvToRgbConverter(context: Context) {
             inputAllocation =
                 Allocation.createSized(renderString, elementType.element, YUBBuffer.array().size)
         }
+
+        if (!::outputAllocation.isInitialized) {
+            outputAllocation = Allocation.createFromBitmap(renderString, output)
+        }
+
+        inputAllocation.copyFrom(YUBBuffer.array())
+        scriptYUVToRGB.setInput(inputAllocation)
+        scriptYUVToRGB.forEach(outputAllocation)
+        outputAllocation.copyTo(output)
+
+    }
+
+    /**
+     *
+     */
+    private fun imageToByteBuffer(image: Image, outputBuffer: ByteArray) {
+
+        if (BuildConfig.DEBUG && image.format != ImageFormat.YUV_420_888) {
