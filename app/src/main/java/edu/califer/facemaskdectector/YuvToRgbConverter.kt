@@ -38,3 +38,14 @@ class YuvToRgbConverter(context: Context) {
             pixelCount = image.cropRect.width() * image.cropRect.height()
             val pixelSizeBits = ImageFormat.getBitsPerPixel(ImageFormat.YUV_420_888)
             YUBBuffer = ByteBuffer.allocateDirect(pixelCount * pixelSizeBits / 8)
+        }
+        YUBBuffer.rewind()
+        imageToByteBuffer(image, YUBBuffer.array())
+
+        if (!::inputAllocation.isInitialized) {
+            val elementType =
+                Type.Builder(renderString, Element.YUV(renderString)).setYuvFormat(ImageFormat.NV21)
+                    .create()
+            inputAllocation =
+                Allocation.createSized(renderString, elementType.element, YUBBuffer.array().size)
+        }
