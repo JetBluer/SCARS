@@ -67,3 +67,19 @@ class YuvToRgbConverter(context: Context) {
     private fun imageToByteBuffer(image: Image, outputBuffer: ByteArray) {
 
         if (BuildConfig.DEBUG && image.format != ImageFormat.YUV_420_888) {
+            error("Assertion Failure")
+        }
+        val imageCrop = image.cropRect
+        val imagePlanes = image.planes
+        imagePlanes.forEachIndexed { index, plane ->
+
+            val outputStride: Int
+            var outputOffSet: Int
+            when (index) {
+                0 -> {
+                    outputStride = 1
+                    outputOffSet = 0
+                }
+                1 -> {
+                    outputStride = 2
+                    outputOffSet = pixelCount + 1
