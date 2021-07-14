@@ -83,3 +83,19 @@ class YuvToRgbConverter(context: Context) {
                 1 -> {
                     outputStride = 2
                     outputOffSet = pixelCount + 1
+                }
+                2 -> {
+                    outputStride = 2
+                    outputOffSet = pixelCount
+                }
+                else -> {
+                    return@forEachIndexed
+                }
+            }
+
+            val planeBuffer = plane.buffer
+            val rowStride = plane.rowStride
+            val pixelStride = plane.pixelStride
+            val planeCrop = if (index == 0) {
+                imageCrop
+            } else {
