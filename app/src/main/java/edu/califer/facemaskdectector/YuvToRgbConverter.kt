@@ -115,3 +115,21 @@ class YuvToRgbConverter(context: Context) {
             } else {
                 (planeWidth - 1) * pixelStride + 1
             }
+
+            for (row in 0 until planeHeight) {
+
+                planeBuffer.position(
+                    (row + planeCrop.top) * rowStride + planeCrop.left * pixelStride
+                )
+
+                if (pixelStride == 1 && outputStride == 1) {
+                    planeBuffer.get(outputBuffer, outputOffSet, rowLength)
+                    outputOffSet += rowLength
+                } else {
+                    planeBuffer.get(rowBuffer, 0, rowLength)
+                    for (col in 0 until planeWidth) {
+                        outputBuffer[outputOffSet] = rowBuffer[col * pixelStride]
+                        outputOffSet += outputStride
+                    }
+                }
+            }
