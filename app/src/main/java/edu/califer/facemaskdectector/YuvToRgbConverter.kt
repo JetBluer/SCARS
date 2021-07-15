@@ -99,3 +99,19 @@ class YuvToRgbConverter(context: Context) {
             val planeCrop = if (index == 0) {
                 imageCrop
             } else {
+                Rect(
+                    imageCrop.left / 2,
+                    imageCrop.top / 2,
+                    imageCrop.right / 2,
+                    imageCrop.bottom / 2
+                )
+            }
+
+            val planeWidth = planeCrop.width()
+            val planeHeight = planeCrop.height()
+            val rowBuffer = ByteArray(plane.rowStride)
+            val rowLength = if (pixelStride == 1 && outputStride == 1) {
+                planeWidth
+            } else {
+                (planeWidth - 1) * pixelStride + 1
+            }
