@@ -3,4 +3,6 @@
 
     <item>
 
-        <shape android:shape="rec
+        <shape android:shape="rectangle">
+
+           
