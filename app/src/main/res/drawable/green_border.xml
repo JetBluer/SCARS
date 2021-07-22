@@ -6,4 +6,4 @@
         <shape android:shape="rectangle">
 
             <stroke
-            
+                android:width="15
