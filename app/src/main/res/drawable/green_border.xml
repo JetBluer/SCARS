@@ -8,4 +8,6 @@
             <stroke
                 android:width="15dp"
                 android:height = "15dp"
-                android:color="@color/green
+                android:color="@color/green"/>
+
+         
