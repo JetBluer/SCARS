@@ -11,4 +11,5 @@
                 android:color="@color/green"/>
 
             <padding
-                androi
+                android:left="15dp"
+  
