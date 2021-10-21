@@ -10,4 +10,5 @@
         tools:context=".MainActivity"
         android:keepScreenOn="true">
 
-        <androidx.camera.view.PreviewVie
+        <androidx.camera.view.PreviewView
+            andr
