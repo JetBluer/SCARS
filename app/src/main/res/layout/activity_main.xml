@@ -11,4 +11,4 @@
         android:keepScreenOn="true">
 
         <androidx.camera.view.PreviewView
-            andr
+            android:id="@+id/camera_vi
