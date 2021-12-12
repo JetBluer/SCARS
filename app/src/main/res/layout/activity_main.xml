@@ -12,4 +12,4 @@
 
         <androidx.camera.view.PreviewView
             android:id="@+id/camera_view"
-            android:layout_width="matc
+            android:layout_width="match_parent"
