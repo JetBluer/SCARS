@@ -16,4 +16,5 @@
             android:layout_height="match_parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/camera_switc
+            android:id="@+id/camera_switch"
+            and
