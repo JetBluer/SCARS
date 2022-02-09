@@ -17,4 +17,4 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/camera_switch"
-            and
+            android:layout_widt
