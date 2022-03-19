@@ -22,4 +22,4 @@
             android:layout_marginBottom="55dp"
             android:contextClickable="@null"
             android:src="@drawable/ic_camera_switch"
-           
+            app:layout_constrain
