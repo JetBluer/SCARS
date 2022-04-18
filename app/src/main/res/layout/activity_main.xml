@@ -22,4 +22,5 @@
             android:layout_marginBottom="55dp"
             android:contextClickable="@null"
             android:src="@drawable/ic_camera_switch"
-            app:layout_constraintBottom_toBot
+            app:layout_constraintBottom_toBottomOf="parent"
+  
