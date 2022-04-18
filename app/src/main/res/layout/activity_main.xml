@@ -23,4 +23,4 @@
             android:contextClickable="@null"
             android:src="@drawable/ic_camera_switch"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:la
+            app:layout_constraintEnd
