@@ -24,4 +24,4 @@
             android:src="@drawable/ic_camera_switch"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            ap
+            app:layout_constra
