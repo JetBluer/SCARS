@@ -28,4 +28,5 @@
             tools:targetApi="m" />
 
         <LinearLayout
-            android:layout_width="wrap_c
+            android:layout_width="wrap_content"
+           
