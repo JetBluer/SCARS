@@ -32,4 +32,4 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="55dp"
             android:gravity="center"
-            andro
+            android:orientation=
