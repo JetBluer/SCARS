@@ -33,4 +33,5 @@
             android:layout_marginTop="55dp"
             android:gravity="center"
             android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf=
+            app:layout_constraintEnd_toEndOf="parent"
+      
