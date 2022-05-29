@@ -34,4 +34,4 @@
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toSta
+            app:layout_constraintStart_toStartOf="parent"
