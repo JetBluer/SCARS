@@ -39,4 +39,4 @@
 
             <TextView
                 android:id="@+id/textView"
-                andr
+                android:layout_w
