@@ -43,4 +43,4 @@
                 android:layout_height="wrap_content" />
 
             <ProgressBar
-                an
+                android:id="@+id/p
