@@ -44,4 +44,5 @@
 
             <ProgressBar
                 android:id="@+id/progress_bar"
-                style="@style/Widget.AppCompat.ProgressBar.Horizonta
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                an
