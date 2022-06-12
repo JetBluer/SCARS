@@ -46,4 +46,4 @@
                 android:id="@+id/progress_bar"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="160dp"
-                andr
+                android:layout_height="wrap_
