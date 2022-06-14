@@ -49,4 +49,5 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:indeterminate="false"
-                an
+                android:max="100"
+      
