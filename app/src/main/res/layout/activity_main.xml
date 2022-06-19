@@ -51,4 +51,5 @@
                 android:indeterminate="false"
                 android:max="100"
                 android:padding="10dp"
-                and
+                android:progress="0" />
+
