@@ -50,4 +50,5 @@
                 android:layout_marginTop="10dp"
                 android:indeterminate="false"
                 android:max="100"
-                android:padding
+                android:padding="10dp"
+          
