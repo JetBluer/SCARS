@@ -58,4 +58,5 @@
 
         <FrameLayout
             android:id="@+id/overlay"
-            android:layout_width="mat
+            android:layout_width="match_parent"
+            andr
