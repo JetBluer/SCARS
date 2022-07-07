@@ -62,4 +62,4 @@
             android:layout_height="match_parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStar
+            app:layout_constraintStart_toStartOf="pare
