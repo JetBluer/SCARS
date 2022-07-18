@@ -2,4 +2,4 @@
     <!-- Base application theme. -->
     <style name="Theme.FaceMaskDectector" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/p
+        <item name="colorPrimary">@color/purple_500</item>
