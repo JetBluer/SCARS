@@ -3,4 +3,5 @@ buildscript {
     ext.kotlin_version = "1.4.21"
     ext.camerax_version = "1.1.0-alpha06"
     ext.lifecycle_version = "2.3.1"
-    ext.tflite =
+    ext.tflite = "0.1.0-rc1"
+  
