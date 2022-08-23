@@ -6,4 +6,5 @@ buildscript {
     ext.tflite = "0.1.0-rc1"
     ext.camerax_view_version = "1.0.0-alpha26"
     repositories {
-        go
+        google()
+        j
