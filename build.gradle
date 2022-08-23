@@ -5,4 +5,5 @@ buildscript {
     ext.lifecycle_version = "2.3.1"
     ext.tflite = "0.1.0-rc1"
     ext.camerax_view_version = "1.0.0-alpha26"
-    repos
+    repositories {
+        go
