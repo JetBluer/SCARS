@@ -7,4 +7,6 @@ buildscript {
     ext.camerax_view_version = "1.0.0-alpha26"
     repositories {
         google()
-        j
+        jcenter()
+    }
+    
