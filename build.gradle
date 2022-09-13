@@ -18,4 +18,5 @@ buildscript {
     }
 }
 
-all
+allprojects {
+    repositories {
