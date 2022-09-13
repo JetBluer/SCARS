@@ -20,3 +20,4 @@ buildscript {
 
 allprojects {
     repositories {
+        google
