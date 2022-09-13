@@ -25,4 +25,4 @@ allprojects {
     }
 }
 
-task
+task clean(type: Delete) {
