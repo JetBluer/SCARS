@@ -26,4 +26,5 @@ allprojects {
 }
 
 task clean(type: Delete) {
-    delete rootProject.buil
+    delete rootProject.buildDir
+}
