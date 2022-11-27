@@ -2,4 +2,5 @@
 @rem ##########################################################################
 @rem
 @rem  Gradle startup script for Windows
-@re
+@rem
+@rem #########
