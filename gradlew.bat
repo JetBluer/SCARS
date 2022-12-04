@@ -5,4 +5,4 @@
 @rem
 @rem ##########################################################################
 
-@rem Set local
+@rem Set local scope for the varia
