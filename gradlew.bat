@@ -6,4 +6,4 @@
 @rem ##########################################################################
 
 @rem Set local scope for the variables with windows NT shell
-if
+if "%OS%"=="Windows_N
