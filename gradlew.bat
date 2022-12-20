@@ -17,4 +17,4 @@ set APP_HOME=%DIRNAME%
 set DEFAULT_JVM_OPTS=
 
 @rem Find java.exe
-if defined JAVA_H
+if defined JAVA_HOME goto findJavaF
