@@ -48,4 +48,4 @@ goto fail
 :init
 @rem Get command-line arguments, handling Windows variants
 
-i
+if not "%OS%" 
