@@ -60,4 +60,5 @@ if "x%~1" == "x" goto execute
 
 set CMD_LINE_ARGS=%*
 
-:ex
+:execute
+@rem Setu
