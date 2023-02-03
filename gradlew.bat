@@ -63,4 +63,4 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\grad
+set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrappe
