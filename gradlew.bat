@@ -63,4 +63,4 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%AP
+set CLASSPATH=%APP_HOME%\grad
